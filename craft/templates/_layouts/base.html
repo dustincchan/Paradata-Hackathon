@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html ng-app="paraData">
+	<head>
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand:400,300,700">
+		<link type="text/css" rel="stylesheet" href="css/responsive.css">
+		<link type="text/css" rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/paradata.css">
+		<!-- External Script Libraries -->
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.js'></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-route.js'></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-resource.js'></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-animate.js'></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-touch.js'></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+		<!-- Base Scripts -->
+		<script type='text/javascript' src='app/app.js'></script>
+		<script type='text/javascript' src='app/routes.js'></script>
+		<script type='text/javascript' src='assets/js/parallax/parallax.min.js'></script>
+		<!-- Core Module Scripts -->
+		<script type='text/javascript' src='assets/js/client.js'></script>
+		<script type='text/javascript' src='assets/js/client-ctrl.js'></script>
+		<script type='text/javascript' src='assets/js/sitemap.js'></script>
+		<script type='text/javascript' src='assets/js/sitemap-ctrl.js'></script>
+		<script type='text/javascript' src='app/modules/contact/contact-drv.js'></script>
+		<script type='text/javascript' src='app/modules/copyright/copyright-drv.js'></script>
+		<script type='text/javascript' src='app/modules/footer/footer-drv.js'></script>
+		<script type='text/javascript' src='app/modules/header/header-drv.js'></script>
+		<script type='text/javascript' src='app/modules/nav/nav-drv.js'></script>
+		<script type='text/javascript' src='app/modules/social/social-drv.js'></script>
+		<!-- Additional Module Scripts -->
+		<script type='text/javascript' src='app/modules/slides/slides.js'></script>
+		<script type='text/javascript' src='app/modules/slides/slides-srv.js'></script>
+		<script type='text/javascript' src='app/modules/slides/slides-ctrl.js'></script>
+		<script type='text/javascript' src='app/modules/slides/slides-drv.js'></script>
+	</head>
+<!--
+	<body>
+		<appheader class='full'></appheader>
+		<div id="content" class='main full' ng-view></div>
+		<appfooter class='full'></appfooter>
+	</body>
+-->
+	<body>
+		<header class="full">
+			<nav class="wrapper middle">
+				<div class="logo">
+					<a href="#"></a>
+				</div>
+				<ul>
+					<li ng-repeat="navitem in sitemap.header.navitems">
+						<a href="{{navitem.link}}">Solutions</a>
+					</li>
+					<li ng-repeat="navitem in sitemap.header.navitems">
+						<a href="{{navitem.link}}">Markets</a>
+					</li>
+					<li ng-repeat="navitem in sitemap.header.navitems">
+						<a href="{{navitem.link}}">Technology</a>
+					</li>
+					<li class="nav-cta">
+						<a href="#">Sign up</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="content full">
+			<div class="hero full" data-parallax="scroll" data-image-src="assets/images/backgrounds/background-homepage-1.jpg">
+				<div class="wrapper middle pad">
+					<h1>
+						Big data powering<br>
+						big decisions
+					</h1>
+					<p style="width:100%;max-width:350px;">
+						Lorem ipsum dolor sit amet, usu tation audiam animal eu, mei dolorum pericula eu. Ut mollis detracto menandri has, libris docendi atomorum duo an.
+					</p>
+					<a class="button" href="#">Get your data score</a>
+				</div>
+			</div>
+			<slides></slides>
+			<div class="slider full">
+				<div class="slide darkgray-txt center quarter" ng-repeat="slide in slides">
+					<a class="datascore middle lightgray-bg" ng-click="next()">
+						<img class="full" src="assets/images/icons/spinner_icon_25.png">
+					</a>
+					<h3>Is your <br>data healthy?</h3>
+					<p>Lorem ipsum dolor sit amet, usu tation audiam animal eu, mei dolorum pericula eu. Ut mollis detracto menandri has, libris docendi atomorum duo an.</p>
+					<p>
+						<a href="#">Learn more</a>
+					</p>
+					<button class="prev">Prev</button>
+					<button class="next">Next</button>
+				</div>
+				<div class="slide darkgray-txt center quarter" ng-repeat="slide in slides">
+					<a class="datascore middle lightgray-bg" ng-click="next()">
+						<img class="full" src="assets/images/icons/spinner_icon_50.png">
+					</a>
+					<h3>Are your Sources Reliable?</h3>
+					<p>Lorem ipsum dolor sit amet, usu tation audiam animal eu, mei dolorum pericula eu. Ut mollis detracto menandri has, libris docendi atomorum duo an.</p>
+					<p>
+						<a href="#">Learn more</a>
+					</p>
+					<button class="prev">Prev</button>
+					<button class="next">Next</button>
+				</div>
+				<div class="slide darkgray-txt center quarter" ng-repeat="slide in slides">
+					<a class="datascore middle lightgray-bg" ng-click="next()">
+						<img class="full" src="assets/images/icons/spinner_icon_75.png">
+					</a>
+					<h3>Are your expenses Optimized?</h3>
+					<p>Lorem ipsum dolor sit amet, usu tation audiam animal eu, mei dolorum pericula eu. Ut mollis detracto menandri has, libris docendi atomorum duo an.</p>
+					<p>
+						<a href="#">Learn more</a>
+					</p>
+					<button class="prev">Prev</button>
+					<button class="next">Next</button>
+				</div>
+				<div class="slide darkgray-txt center quarter" ng-repeat="slide in slides">
+					<a class="datascore middle lightgray-bg" ng-click="next()">
+						<img class="full" src="assets/images/icons/spinner_icon_100.png">
+					</a>
+					<h3>Are you tracking changes in real time?</h3>
+					<p>Lorem ipsum dolor sit amet, usu tation audiam animal eu, mei dolorum pericula eu. Ut mollis detracto menandri has, libris docendi atomorum duo an.</p>
+					<p>
+						<a href="#">Learn more</a>
+					</p>
+					<button class="prev">Prev</button>
+					<button class="next">Next</button>
+				</div>
+			</div>
+			<div class="intro full">
+				<div class="wrapper middle pad">
+					<h3 class="center">How does Paradata work?</h3>
+					<video class="middle" width="500" height="281" frameborder="0" controls>
+						<source src="assets/videos/paradata_solutions-hd.mp4" type="video/mp4">
+						Your browser does not support HTML5 video. Please download a modern browser, like <a href="https://www.google.com/chrome/browser/desktop/">Google Chrome</a>.
+					</video>
+				</div>
+			</div>
+		</div>
+		<footer class="full">
+			<div class="wrapper middle">
+				<div class="half pad">
+					<nav>
+						<p>
+							<a href="{{navitem.link}}" ng-repeat="navitem in sitemap.footer.navitems">Company</a><br>
+							<a href="{{navitem.link}}">Careers</a><br>
+							<a href="{{navitem.link}}">Blog</a><br>
+						</p>
+					</nav>
+					<div class="social">
+						<p>Follow Us:</p>
+						<ul>
+							<li ng-repeat="social in socials">
+								<a href="{{social.link}}" target="_blank">
+									<img src="assets/images/icons/social_icon_facebook.png" alt="">
+								</a>
+							</li>
+							<li ng-repeat="social in socials">
+								<a href="{{social.link}}" target="_blank">
+									<img src="assets/images/icons/social_icon_twitter.png" alt="">
+								</a>
+							</li>
+							<li ng-repeat="social in socials">
+								<a href="{{social.link}}" target="_blank">
+									<img src="assets/images/icons/social_icon_linkedin.png" alt="">
+								</a>
+							</li>
+							<li ng-repeat="social in socials">
+								<a href="{{social.link}}" target="_blank">
+									<img src="assets/images/icons/social_icon_google_plus.png" alt="">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="contact half pad">
+					<p>Paradata</p>
+					<p>
+						<a href="https://goo.gl/maps/4d6BKC2FUJE2" target="_blank">
+							200 North Almaden Blvd. Suite 250<br>
+							San Jose, California 95110
+						</a>
+					</p>
+					<p>
+						<a href="tel:1-408-791-2070">408-791-2070</a><br>
+						<a href="mailto:info@paradata.io">info@paradata.io</a>
+					</p>
+				</div>
+			</div>
+			<div class="darkgray-bg center full">
+				<h6>&copy; 2016 Paradata, all rights reserved.</h6>
+			</div>
+		</footer>
+	</body>
+</html>

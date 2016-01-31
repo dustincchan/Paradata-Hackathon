@@ -1,0 +1,238 @@
+
+.full,
+.half,
+.third, .twothird,
+.quarter, .twoquarter, .threequarter,
+.fifth, .twofifth, .threefifth, .fourfifth,
+.sixth, .twosixth, .threesixth, .foursixth, .fivesixth,
+.seventh, .twoseventh, .threeseventh, .fourseventh, .fiveseventh, .sixseventh,
+.eigth, .twoeigth, .threeeigth, .foureigth, .fiveeigth, .sixeigth, .seveneigth,
+.ninth, .twoninth, .threeninth, .fourninth, .fiveninth, .sixninth, .sevenninth, .eightninth,
+.tenth, .twotenth, .threetenth, .fourtenth, .fivetenth, .sixtenth, .sevententh, .eighttenth, .ninetenth {
+	margin: 0;
+	float: left;
+	display: block;
+}
+.full {
+	width: 100%;
+	width: calc(100% * 1 / 1);
+}
+.half {
+	width: 50%;
+	width: calc(100% * 1 / 2);
+}
+.third {
+	width: 33.333%;
+	width: calc(100% * 1 / 3);
+}
+.twothird {
+	width: 66.666%;
+	width: calc(100% * 2 / 3);
+}
+.quarter {
+	width: 25%;
+	width: calc(100% * 1 / 4);
+}
+.twoquarter {
+	width: 50%;
+	width: calc(100% * 2 / 4);
+}
+.threequarter {
+	width: 75%;
+	width: calc(100% * 3 / 4);
+}
+.fifth {
+	width: 20%;
+	width: calc(100% * 1 / 5);
+}
+.twofifth {
+	width: 40%;
+	width: calc(100% * 2 / 5);
+}
+.threefifth {
+	width: 60%;
+	width: calc(100% * 3 / 5);
+}
+.fourfifth {
+	width: 80%;
+	width: calc(100% * 4 / 5);
+}
+.sixth {
+	width: 16.666;
+	width: calc(100% * 1 / 6);
+}
+.twosixth {
+	width: 33.333%;
+	width: calc(100% * 2 / 6);
+}
+.threesixth {
+	width: 50%;
+	width: calc(100% * 3 / 6);
+}
+.foursixth {
+	width: 66.666%;
+	width: calc(100% * 4 / 6);
+}
+.fivesixth {
+	width: 83.333%;
+	width: calc(100% * 5 / 6);
+}
+.seventh {
+	width: 14.285%;
+	width: calc(100% * 1 / 7);
+}
+.twoseventh {
+	width: 28.571%;
+	width: calc(100% * 2 / 7);
+}
+.threeseventh {
+	width: 42.857%;
+	width: calc(100% * 3 / 7);
+}
+.fourseventh {
+	width: 57.142%;
+	width: calc(100% * 4 / 7);
+}
+.fiveseventh {
+	width: 71.428%;
+	width: calc(100% * 5 / 7);
+}
+.sixseventh {
+	width: 85.714%;
+	width: calc(100% * 6 / 7);
+}
+.eigth {
+	width: 12.5%;
+	width: calc(100% * 1 / 8);
+}
+.twoeigth {
+	width: 25%;
+	width: calc(100% * 2 / 8);
+}
+.threeeigth {
+	width: 37.5%;
+	width: calc(100% * 3 / 8);
+}
+.foureigth {
+	width: 50%;
+	width: calc(100% * 4 / 8);
+}
+.fiveeigth {
+	width: 62.5%;
+	width: calc(100% * 5 / 8);
+}
+.sixeigth {
+	width: 75%;
+	width: calc(100% * 6 / 8);
+}
+.seveneigth {
+	width: 87.5%;
+	width: calc(100% * 7 / 8);
+}
+.ninth {
+	width: 11.111%;
+	width: calc(100% * 1 / 9);
+}
+.twoninth {
+	width: 22.222%;
+	width: calc(100% * 2 / 9);
+}
+.threeninth {
+	width: 33.333%;
+	width: calc(100% * 3 / 9);
+}
+.fourninth {
+	width: 44.444%;
+	width: calc(100% * 4 / 9);
+}
+.fiveninth {
+	width: 55.555%;
+	width: calc(100% * 5 / 9);
+}
+.sixninth {
+	width: 66.666%;
+	width: calc(100% * 6 / 9);
+}
+.sevenninth {
+	width: 77.777;
+	width: calc(100% * 7 / 9);
+}
+.eightninth {
+	width: 88.888%;
+	width: calc(100% * 8 / 9);
+}
+.tenth {
+	width: 10%;
+	width: calc(100% * 1 / 10);
+}
+.twotenth {
+	width: 20%;
+	width: calc(100% * 2 / 10);	
+}
+.threetenth {
+	width: 30%;
+	width: calc(100% * 3 / 10);
+}
+.fourtenth {
+	width: 40%;
+	width: calc(100% * 4 / 10);	
+}
+.fivetenth {
+	width: 50%;
+	width: calc(100% * 5 / 10);
+}
+.sixtenth {
+	width: 60%;
+	width: calc(100% * 6 / 10);
+}
+.sevententh {
+	width: 70%;
+	width: calc(100% * 7 / 10);
+}
+.eighttenth {
+	width: 80%;
+	width: calc(100% * 8 / 10);
+}
+.ninetenth {
+	width: 90%;
+	width: calc(100% * 9 / 10);
+}
+.tablet,
+.mobile {
+	display: none;
+}
+.desktop {
+	display: block;
+}
+@media screen and (max-width: 1000px) {
+	.desktop,
+	.mobile {
+		display: none;
+	}
+	.tablet {
+		display: block;
+	}
+}
+@media screen and (max-width: 768px), only screen and (-webkit-device-pixel-ratio: 2) {}
+@media screen and (max-width: 640px), only screen and (-webkit-device-pixel-ratio: 2) {}
+@media screen and (max-width: 690px) {
+	.full,
+	.half,
+	.third, .twothird,
+	.quarter, .twoquarter, .threequarter,
+	.fifth, .twofifth, .threefifth, .fourfifth,
+	.sixth, .twosixth, .threesixth, .foursixth, .fivesixth,
+	.seventh, .twoseventh, .threeseventh, .fourseventh, .fiveseventh, .sixseventh,
+	.eigth, .twoeigth, .threeeigth, .foureigth, .fiveeigth, .sixeigth, .seveneigth,
+	.ninth, .twoninth, .threeninth, .fourninth, .fiveninth, .sixninth, .sevenninth, .eightninth,
+	.tenth, .twotenth, .threetenth, .fourtenth, .fivetenth, .sixtenth, .sevententh, .eighttenth, .ninetenth {
+		width: 100%;
+	}
+	.desktop,
+	.tablet {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+}
