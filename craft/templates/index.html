@@ -18,6 +18,7 @@
 		<script type='text/javascript' src='assets/js/app.js'></script>
 		<script type='text/javascript' src='assets/js/routes.js'></script>
 		<script type='text/javascript' src='assets/js/parallax/parallax.min.js'></script>
+		<script type="text/javascript" src="assets/js/angular-parallax.js"></script>
 		<!-- Core Module Scripts -->
 		<script type='text/javascript' src='assets/js/client.js'></script>
 		<script type='text/javascript' src='assets/js/client-ctrl.js'></script>
@@ -25,6 +26,8 @@
 		<script type='text/javascript' src='assets/js/sitemap-ctrl.js'></script>
 		<script type='text/javascript' src='assets/js/contact-drv.js'></script>
 		<script type='text/javascript' src='assets/js/copyright-drv.js'></script>
+		<script type="text/javascript" src="assets/js/hydra-drv.js"></script>
+		<script type="text/javascript" src="assets/js/hydra-ctrl.js"></script>
 		<script type='text/javascript' src='assets/modules/footer/footer-drv.js'></script>
 		<script type='text/javascript' src='assets/modules/header/header-drv.js'></script>
 		<script type='text/javascript' src='assets/modules/nav/nav-drv.js'></script>
@@ -62,7 +65,9 @@
 			</nav>
 		</header>
 
-	<div class="main full ng-scope" ng-view="" autoscroll="true"><!-- ngInclude:  --><div class="chimera full ng-scope" ng-include="" src="template"><div class="content full ng-scope">
+	<div class="main full ng-scope" ng-view="" autoscroll="true">
+	<!-- ngInclude:  -->
+	<div class="content full ng-scope">
 		<div class="hero home full ng-isolate-scope" parallax-background="" parallax-ratio="0.2" style="background-position: 50% 16px;"><div ng-transclude="">
 			<div class="hero-overlay full ng-scope">
 				<div class="slideshow full ng-isolate-scope" slideshow="healthscore">
@@ -84,7 +89,10 @@
 					<p class="ng-binding">The Paradata Network Score measures a supply chain in four dimensions: Leadtime, Cost, Compliance, and Risk.</p>
 					<a class="button ng-scope" ng-controller="SalesforceController" ng-click="popover()">What's your score?</a>
 				</div>
-			</div><!-- end ngRepeat: slide in slides --><div class="slide white-txt full ng-scope ng-hide" ng-repeat="slide in slides" ng-show="slide.visible" ng-animate="animate" ng-swipe-left="next()" ng-swipe-right="prev()">
+			</div>
+
+			<!-- end ngRepeat: slide in slides -->
+			<div class="slide white-txt full ng-scope ng-hide" ng-repeat="slide in slides" ng-show="slide.visible" ng-animate="animate" ng-swipe-left="next()" ng-swipe-right="prev()">
 				<div class="full pad center">
 					<h1>Transparency meets supply chain</h1>				
 				</div>

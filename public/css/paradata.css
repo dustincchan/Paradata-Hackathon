@@ -246,7 +246,7 @@ footer .social li a img {
 	float: left;
 }
 
-/*CSS added by Dustin (mostly extracted from main paradata.io website)*/
+/*CSS added to update page, mostly extracted from the paradata.io homepage.*/
 .white-bg.full {
     background: white;
     color: black;
@@ -313,4 +313,15 @@ footer.full {
 
 .white-bg a:hover, .lightgray-bg a:hover, .midgray-bg a:hover, .darkgray-bg a:hover {
     color: #75bbce;
+}
+
+button.slidenav {
+    color: #f3f3f3;
+    padding: 20px;
+    font-size: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    display: table-cell;
 }
