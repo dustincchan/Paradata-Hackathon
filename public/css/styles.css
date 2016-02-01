@@ -262,6 +262,7 @@ footer p a {
 footer p a:hover {
 	text-decoration: underline;
 }
+
 .copyright p {
 	font-size: 0.75em;
 }
