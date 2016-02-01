@@ -46,6 +46,19 @@ Dark Gray	     | #222
 	background: #222;
   background-image: url("../images/backgrounds/texture_tile-bg.png");
 }
+
+.white-bg.full {
+    background: white;
+}
+
+.third.pad.center {
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+
 }
 .darkgray-txt {
 	color: #222;
@@ -71,7 +84,7 @@ body {
 	font-family: "Quicksand", sans-serif;
 }
 h1, h2, h3, h4, h5, h6, p {
-	font-weight: 400;
+	font-weight: 200;
 	line-height: 1.5em;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -83,6 +96,15 @@ h1 {
 h3 {
 	font-size: 24px;
 }
+
+h4.bubble.secondary-bg.white-txt {
+    width: 13%;
+    margin: auto;
+    border-radius: 500px;
+    color: white;
+    font-weight: 100;
+}
+
 p {
 	font-size: 20px;
 
@@ -248,4 +270,11 @@ footer .social li a img {
 	width: auto;
 	height: 40px;
 	float: left;
+}
+
+img.inline-icon {
+    width: auto;
+    height: 1.5em;
+    display: inline-block;
+    vertical-align: middle;
 }
