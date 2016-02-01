@@ -1,0 +1,19 @@
+<div
+	class="slide darkgray-txt center full"
+	ng-repeat="image in images"
+	ng-show="image.visible"
+	ng-animate="animate"
+	ng-swipe-left="next()"
+	ng-swipe-right="prev()"
+	>
+	<a class="datascore middle lightgray-bg" ng-click="next()">
+		<img class="full" src="assets/images/icons/{{image.icon}}">							
+	</a>
+	<h3>{{image.headline}}</h3>
+	<p>{{image.text}}</p>
+	<p>
+		<a href="{{image.link.url}}">{{image.link.text}}</a>
+	</p>
+	<button id="prev" class="slidenav" ng-click="prev()"><span class="icon-arrow_left"></span></button>
+	<button id="next" class="slidenav" ng-click="next()"><span class="icon-arrow_right"></span></button>
+</div>

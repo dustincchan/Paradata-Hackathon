@@ -3,7 +3,7 @@ angular.module('coreMod')
 		return {
 			restrict: 'E',
 			templateUrl: 'social.html',
-			controller: 'ClientController'
+			controller: 'ClientController',
+			controllerAs: 'client',
 		};
-	})
-;
+	});

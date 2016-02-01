@@ -1,0 +1,35 @@
+<nav class="desktop full">
+	<ul class="wrapper">
+		<li ng-repeat="page in sitemap.sitemap.pages">
+			<a href="#/{{page.title}}">{{page.title}}</a>
+		</li>
+		<li class="right-float" ng-controller="ClientController as client">
+			<a href="tel:1-{{ client.client.contact.phone }}">Call Now! {{ client.client.contact.phone }}</a>
+		</li>
+	</ul>
+</nav>
+<nav class="tablet full">
+	<ul class="wrapper">
+		<li ng-repeat="page in sitemap.sitemap.pages">
+			<a href="#/{{page.title}}">{{page.title}}</a>
+		</li>
+		<li class="right-float" ng-controller="ClientController as client">
+			<a href="tel:1-{{ client.client.contact.phone }}">Call Now!</a>
+		</li>
+	</ul>
+</nav>
+<nav class="mobile full">
+	<ul class="wrapper">
+		<li>
+			<a href="">Menu</a>
+			<ul class="dropdown full">
+				<li ng-repeat="page in sitemap.sitemap.pages">
+					<a href="#/{{page.title}}">{{page.title}}</a>
+				</li>
+			</ul>
+		</li>
+		<li class="right-float" ng-controller="ClientController as client">
+			<a href="tel:1-{{ client.client.contact.phone }}">Call</a>
+		</li>
+	</ul>
+</nav>

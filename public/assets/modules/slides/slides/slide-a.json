@@ -1,0 +1,15 @@
+{
+	"img": "assets/images/background-boston_skyline.png",
+	"alt": "assets/images/bg1",
+	"position": "top center",
+	"id": "slide1",
+	"headline": "Digital Marketing & Web Design",
+	"subheadline": "Solutions for Small Businesses",
+	"text": "We're a creative team on a mission to help great local businesses reach more customers. We offer a complete suite of digital marketing and design services that any small business can afford. So what are you waiting for?",
+	"links": [
+		{
+			"text": "Get started >",
+			"url": "#/products",
+		},
+	],
+}

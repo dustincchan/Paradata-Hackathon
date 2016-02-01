@@ -1,0 +1,37 @@
+<div class="wrapper">
+	<div class="hero content full">
+		<h1>Services</h1>
+		<h2>Subheader</h2>
+	</div>
+</div>
+<div class="subsection full">
+	<div class="wrapper">
+		<div class="full">
+			<h3>Subsection Title</h3>
+			<h4>Subsection Subtitle</h4>
+		</div>
+	</div>
+	<form id="order" class="full" action="mailto:rsmith@finixcreative.com" method="post" enctype="text/plain" ng-controller="ProductsController as products">
+		<div class="full">
+			<div class="tile {{service.size}}" ng-repeat="service in products.services | orderBy: ['genre', 'title'] | filter: searchTitles | filter: filterTitles">
+				<input type="checkbox" id="{{ service.title }}" name="{{ service.title }}" value="selected" ng-model="product.order" ng-true-value="selected" ng-false-value="unselected"/>
+				<label class="product full" for="{{service.title}}">
+					<img class="checkbox-image middle" ng-src="{{service.image}}"/>
+					<div class="text-box full">
+						<h4>{{service.title}}</h4>
+						<p>{{service.description}}</p>
+						<p><b>{{service.cost}}</b></p>
+					</div>
+					<div class="check-box full">
+						<img class="checkmark" src="assets/images/icons/icon-checkmark.png"/>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="content full">
+				<button class="submit button middle center" form="order" type="submit" value="Submit">Request Service</button>
+			</div>
+		</div>
+	</form>
+</div>

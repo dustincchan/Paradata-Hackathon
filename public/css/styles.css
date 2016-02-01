@@ -5,24 +5,23 @@
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
+	-webkit-transition: all .3s ease-in;
+	transition: all .3s ease-in;
 }
 body,
 button {
 	font-family: 'Open Sans', sans-serif;
 }
 body {
-	background: #444;
+	background: url("../images/low_contrast_linen.png") #444;
 	background-attachment: fixed;
 	color: #444;
-	width: 100%;
 	margin: 0px;
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
-a, button, .button, input[type=submit] {
+a {
 	text-decoration: none;
-	-webkit-transition: all .3s ease-in;
-	transition: all .3s ease-in;
 }
 h1 {
 	font-size: 2.5em;
@@ -68,18 +67,20 @@ header a img {
 nav {}
 nav ul li a {
 	text-transform: uppercase;
-	display: block;
 }
 ul {
 	width: 100%;
 	padding: 0;
 	margin: 0;
 }
-nav ul li {
+ul li {
 	line-height: 30px;
 	float: left;
 	display: inline-block;
 	list-style-type: none;
+}
+ul li a {
+	display: block;
 }
 nav ul li .subnav,
 nav ul li .dropdown {
@@ -221,11 +222,9 @@ input:active, input:focus, input:hover,
 select:active, select:focus, select:hover {
 	outline: none;
 }
-/*
 input[type=checkbox] {
 	display: none;
 }
-*/
 input[type=checkbox] + label.product {
 	background: #444;
 	display: inline-block;
@@ -239,17 +238,6 @@ input[type=submit] {}
 input[type=text] {
 	display: inline-block;
 }
-/*
-.hydra {
-	position: relative;
-}
-input[name=edit] {
-	position: absolute;
-	top: 50%;
-	right: 20px;
-	transform: translateY(-50%);
-}
-*/
 ::-webkit-input-placeholder {
 	color: #444;
 }
@@ -289,15 +277,14 @@ footer p a:hover {
 	width: 100%;
 	padding: 71px 0 0 0;
 }
-.slider {
-	height: 100%;
-	position: relative;
-}
+.slider {height: 100%;}
 .slide {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: #fff;
+	padding: 40px 0;
+	position: relative;
 }
 .slide.ng-animate {
 	top: 0px;
@@ -350,7 +337,6 @@ button.slidenav:focus {
 .hero img {
 	max-width: 100%;
 }
-/*
 .subsection {
 	background: #fff;
 }
@@ -364,12 +350,16 @@ button.slidenav:focus {
 .subsection-alt {
 	background: #ccc;
 }
-*/
 a.sublink {
 	color: #444
 }
 a.sublink:hover {
 	background: rgba(68,68,68,0.1);
+}
+#bbb {
+	position: relative;
+	top: 50%;
+	transform: translateY(50%);
 }
 .center {
 	text-align: center;
@@ -427,7 +417,6 @@ a.sublink:hover {
 #displayracks h4 {
 	color: #fff;
 }
-/*
 .overlay {
 	background: rgba(0,0,0,0.2);
 	width: 100%;
@@ -436,17 +425,10 @@ a.sublink:hover {
 	bottom: 0;
 	display: none;
 }
-*/
 
 /* DEVICES */
-@media screen and (max-width: 1000px), only screen and (-webkit-device-pixel-ratio: 2) {
-	button.slidenav {
-		display: none;
-	}
-}
 @media screen and (max-width: 960px) {}
 @media screen and (max-width: 768px) {}
-@media screen and (max-width: 640px) {}
 @media screen and (max-width: 640px), only screen and (-webkit-device-pixel-ratio: 2) {
 	p {
 		font-size: 32px;
@@ -456,6 +438,15 @@ a.sublink:hover {
 	}
 	.category {
 		width: 100%;
+	}
+	.slide {
+		padding: 0;
+	}
+	.slide h1 {
+		margin-top: 0;
+	}
+	button.slidenav {
+		display: none;
 	}
 }
 @media screen and (max-width: 585px), only screen and (-webkit-device-pixel-ratio: 2) {}
