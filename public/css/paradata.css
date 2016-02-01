@@ -38,27 +38,13 @@ Dark Gray	     | #222
 }
 .lightgray-bg {
 	background: #f3f3f3;
+	color: black;
 }
 .midgray-bg {
 	background: #ccc;
 }
 .darkgray-bg {
 	background: #222;
-  background-image: url("../images/backgrounds/texture_tile-bg.png");
-}
-
-.white-bg.full {
-    background: white;
-}
-
-.third.pad.center {
-    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-}
-
-
-
 }
 .darkgray-txt {
 	color: #222;
@@ -84,7 +70,7 @@ body {
 	font-family: "Quicksand", sans-serif;
 }
 h1, h2, h3, h4, h5, h6, p {
-	font-weight: 200;
+	font-weight: 400;
 	line-height: 1.5em;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -96,18 +82,8 @@ h1 {
 h3 {
 	font-size: 24px;
 }
-
-h4.bubble.secondary-bg.white-txt {
-    width: 13%;
-    margin: auto;
-    border-radius: 500px;
-    color: white;
-    font-weight: 100;
-}
-
 p {
 	font-size: 20px;
-
 }
 header {
 	background: #586473;
@@ -165,11 +141,11 @@ header nav li a:hover {
 	padding-top: 80px;
 }
 .hero {
-/*	background: url("../images/backgrounds/background-homepage-1.jpg");
+	background: url("../images/backgrounds/background-homepage-1.jpg");
 	background-color: #0387ab;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-attachment: fixed; */
+	background-attachment: fixed; 
 	color: #fff;
 }
 .parallax-mirror,
@@ -199,7 +175,6 @@ header nav li a:hover {
 	background: #fff;
 }
 .slide {
-	color: black;
 	padding: 100px 20px 20px;
 	position: relative;
 	-webkit-transition: all .3s ease-in;
@@ -272,9 +247,31 @@ footer .social li a img {
 	float: left;
 }
 
-img.inline-icon {
+/*CSS added by Dustin (mostly extracted from main paradata.io website)*/
+.white-bg.full {
+    background: white;
+    color: black;
+}
+
+.inline-icon {
     width: auto;
     height: 1.5em;
     display: inline-block;
     vertical-align: middle;
+}
+
+.button-body {
+    background: #0387ab;
+    color: #fff !important;
+    border: none;
+}
+
+.hero .button, .button-body {
+    margin: 20px 0;
+    padding: 10px 15px;
+    font-family: "Quicksand", sans-serif;
+    border-radius: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
 }

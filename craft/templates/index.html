@@ -42,7 +42,7 @@
 		<appfooter class='full'></appfooter>
 	</body>
 -->
-	<body>
+<body>
 		<header class="darkgray-bg texture-bg full">
 			<nav class="wrapper middle">
 				<div class="logo">
@@ -61,23 +61,103 @@
 				</ul>
 			</nav>
 		</header>
-		<div class="content full">
-			<div class="hero full" data-parallax="scroll" data-image-src="assets/images/backgrounds/background-homepage-1.jpg">
-				<div class="wrapper middle pad">
-					<h1>
-						TRANSPARENCY MEETS SUPPLY CHAIN
-					</h1>
-					<p style="width:40%;max-width:350px;">
-						THE NETWORK SCORE℠ <br/><br/
 
-						<i>"If your product could say what it needs to be healthy, what would it say?"</i><br/><br/>
-
-						The Paradata Network Score measures a supply chain in four dimensions: Leadtime, Cost, Compliance, and Risk.
-					</p>
-					<a class="button" href="#">WHAT'S YOUR SCORE?</a>
+	<div class="main full ng-scope" ng-view="" autoscroll="true"><!-- ngInclude:  --><div class="chimera full ng-scope" ng-include="" src="template"><div class="content full ng-scope">
+		<div class="hero home full ng-isolate-scope" parallax-background="" parallax-ratio="0.2" style="background-position: 50% 16px;"><div ng-transclude="">
+			<div class="hero-overlay full ng-scope">
+				<div class="slideshow full ng-isolate-scope" slideshow="healthscore">
+		<div class="wrapper middle">
+			<!-- ngRepeat: slide in slides --><div class="slide white-txt full ng-scope" ng-repeat="slide in slides" ng-show="slide.visible" ng-animate="animate" ng-swipe-left="next()" ng-swipe-right="prev()">
+				<div class="full pad center">
+					<h1>Transparency meets supply chain</h1>				
 				</div>
-			</div>
-			<slides></slides>
+				<a class="half pad" ng-click="next()">
+					<img class="full healthscore middle" title="The Network Score℠" src="assets/icon_networkscore.png">
+				</a>
+				<div class="half pad white-txt">
+					<h2 class="ng-binding">The Network Score℠</h2>
+					<p>
+						<i>
+							<!-- ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">"If your product could say what it needs to be healthy, what would it say?"<br></span><!-- end ngRepeat: question in slide.questions -->
+						</i>
+					</p>
+					<p class="ng-binding">The Paradata Network Score measures a supply chain in four dimensions: Leadtime, Cost, Compliance, and Risk.</p>
+					<a class="button ng-scope" ng-controller="SalesforceController" ng-click="popover()">What's your score?</a>
+				</div>
+			</div><!-- end ngRepeat: slide in slides --><div class="slide white-txt full ng-scope ng-hide" ng-repeat="slide in slides" ng-show="slide.visible" ng-animate="animate" ng-swipe-left="next()" ng-swipe-right="prev()">
+				<div class="full pad center">
+					<h1>Transparency meets supply chain</h1>				
+				</div>
+				<a class="half pad" ng-click="next()">
+					<img class="full healthscore middle" title="Leadtime" src="assets/icon_leadtime.png">
+				</a>
+				<div class="half pad white-txt">
+					<h2 class="ng-binding">Leadtime</h2>
+					<p>
+						<i>
+							<!-- ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">"Which components will prevent me from shipping product?"<br></span><!-- end ngRepeat: question in slide.questions -->
+						</i>
+					</p>
+					<p class="ng-binding">Leadtime scoring evaluates and simulates the impact of component decisions before committing... that’s transparency.</p>
+					<a class="button ng-scope" ng-controller="SalesforceController" ng-click="popover()">What's your score?</a>
+				</div>
+			</div><!-- end ngRepeat: slide in slides --><div class="slide white-txt full ng-scope ng-hide" ng-repeat="slide in slides" ng-show="slide.visible" ng-animate="animate" ng-swipe-left="next()" ng-swipe-right="prev()">
+				<div class="full pad center">
+					<h1>Transparency meets supply chain</h1>				
+				</div>
+				<a class="half pad" ng-click="next()">
+					<img class="full healthscore middle" title="Cost" src="assets/icon_cost.png">
+				</a>
+				<div class="half pad white-txt">
+					<h2 class="ng-binding">Cost</h2>
+					<p>
+						<i>
+							<!-- ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">"Are my component prices market competitive?"<br></span><!-- end ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">" What should I be paying based on future demand?"<br></span><!-- end ngRepeat: question in slide.questions -->
+						</i>
+					</p>
+					<p class="ng-binding">Cost scoring measures the variance between supplier-provided costs vs the best available market cost... that’s transparency.</p>
+					<a class="button ng-scope" ng-controller="SalesforceController" ng-click="popover()">What's your score?</a>
+				</div>
+			</div><!-- end ngRepeat: slide in slides --><div class="slide white-txt full ng-scope ng-hide" ng-repeat="slide in slides" ng-show="slide.visible" ng-animate="animate" ng-swipe-left="next()" ng-swipe-right="prev()">
+				<div class="full pad center">
+					<h1>Transparency meets supply chain</h1>				
+				</div>
+				<a class="half pad" ng-click="next()">
+					<img class="full healthscore middle" title="Compliance" src="assets/icon_compliance.png">
+				</a>
+				<div class="half pad white-txt">
+					<h2 class="ng-binding">Compliance</h2>
+					<p>
+						<i>
+							<!-- ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">"Are all my products compliant to current regulations?"<br></span><!-- end ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">"Am I prepared for new regulations?"<br></span><!-- end ngRepeat: question in slide.questions -->
+						</i>
+					</p>
+					<p class="ng-binding">Compliance scoring measures the ability of product data to support rigorous examination of import/export compliance... that’s transparency.</p>
+					<a class="button ng-scope" ng-controller="SalesforceController" ng-click="popover()">What's your score?</a>
+				</div>
+			</div><!-- end ngRepeat: slide in slides --><div class="slide white-txt full ng-scope ng-hide" ng-repeat="slide in slides" ng-show="slide.visible" ng-animate="animate" ng-swipe-left="next()" ng-swipe-right="prev()">
+				<div class="full pad center">
+					<h1>Transparency meets supply chain</h1>				
+				</div>
+				<a class="half pad" ng-click="next()">
+					<img class="full healthscore middle" title="Risk" src="assets/icon_risk.png">
+				</a>
+				<div class="half pad white-txt">
+					<h2 class="ng-binding">Risk</h2>
+					<p>
+						<i>
+							<!-- ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">"What is my sole source component status by product?"<br></span><!-- end ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">"Do I have any components going end of life?<br></span><!-- end ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">If yes, which ones?"<br></span><!-- end ngRepeat: question in slide.questions -->
+						</i>
+					</p>
+					<p class="ng-binding">Risk scoring measures how a component is sourced, proximity to manufacturing locations, supplier performance... that’s transparency.</p>
+					<a class="button ng-scope" ng-controller="SalesforceController" ng-click="popover()">What's your score?</a>
+				</div>
+			</div><!-- end ngRepeat: slide in slides -->
+		</div>
+		<button id="prev" class="slidenav" ng-click="prev()"><span class="icon-arrow_left"></span></button>
+		<button id="next" class="slidenav" ng-click="next()"><span class="icon-arrow_right"></span></button>
+	</div>
+
 
 	<div class="white-bg full">
 		<div class="wrapper">
@@ -126,6 +206,7 @@
 						Supply chain discovery and transparency for less than the cost of two lattes per month.<br>
 						The first <img class="inline-icon" src="./images/icons/icon_networkscore.png" alt="Paradata Network Score" title="Paradata Network Score"> is on us!
 					</p>
+					<a href="" class="button-body ng-scope" ng-controller="SalesforceController" ng-click="popover()">Schedule a demo</a>
 				</div>
 				<div class="half pad">
 					<img class="full" src="./images/coffee_cups.png" alt="Free gourmet coffee gift card" title="Free gourmet coffee gift card!">
@@ -178,7 +259,7 @@
 				</div>
 			</div>
 			<div class="darkgray-bg center full">
-				<h6>&copy; 2015 Paradata, all rights reserved.</h6>
+				<h6>&copy; 2016 Paradata, all rights reserved.</h6>
 			</div>
 		</footer>
 	</body>
