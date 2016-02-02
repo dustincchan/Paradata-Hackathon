@@ -123,26 +123,28 @@
 				</p>
 			</div>
 			{% endfor %}
-			
 		</div>
 	</div>
 </div>
+
 <div class="lightgray-bg intro full">
 	<div class="wrapper middle">
-		<div class="full">
-			<div class="half pad">
-				<h3>Schedule a demo</h3>
-				<h4>Get a complimentary gourmet coffee gift card</h4>
-				<p>
-					Supply chain discovery and transparency for less than the cost of two lattes per month.<br>
-					The first <img class="inline-icon" src="./images/icons/icon_networkscore.png" alt="Paradata Network Score" title="Paradata Network Score"> is on us!
-				</p>
-				<a href="" class="button-body ng-scope" ng-controller="SalesforceController" ng-click="popover()">Schedule a demo</a>
+		{% for block in entry.promoCoffee.type('coffeeBlock') %}
+			<div class="full">
+				<div class="half pad">
+					<h3>{{ block.header }}</h3>
+					<h4>Get a complimentary gourmet coffee gift card</h4>
+					<p>
+						{{ block.offerDescription }}<br>
+						<img class="inline-icon" src="./images/icons/icon_networkscore.png" alt="Paradata Network Score" title="Paradata Network Score"> is on us!
+					</p>
+					<a href="" class="button-body ng-scope" ng-controller="SalesforceController" ng-click="popover()">{{ block.demoLabelText }}</a>
+				</div>
+				<div class="half pad">
+					<img class="full" src="./images/coffee_cups.png" alt="Free gourmet coffee gift card" title="Free gourmet coffee gift card!">
+				</div>
 			</div>
-			<div class="half pad">
-				<img class="full" src="./images/coffee_cups.png" alt="Free gourmet coffee gift card" title="Free gourmet coffee gift card!">
-			</div>
-		</div>
+		{% endfor %}
 	</div>
 </div>
 {% endblock %}

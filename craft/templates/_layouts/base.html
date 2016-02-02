@@ -81,21 +81,13 @@
 					<div class="social">
 						<p>Follow Us:</p>
 						<ul>
-							<li ng-repeat="social in socials">
-								<a href="{{social.link}}" target="_blank">
-									<img src="assets/images/icons/social_icon_facebook.png" alt="">
-								</a>
-							</li>
-							<li ng-repeat="social in socials">
-								<a href="{{social.link}}" target="_blank">
-									<img src="assets/images/icons/social_icon_twitter.png" alt="">
-								</a>
-							</li>
-							<li ng-repeat="social in socials">
-								<a href="{{social.link}}" target="_blank">
-									<img src="assets/images/icons/social_icon_linkedin.png" alt="">
-								</a>
-							</li>
+							{% for image in footer.followUsIcons %}
+								<li ng-repeat="social in socials">
+									<a href="" target="_blank">
+										<img src="{{ image.url }}" alt="{{ image.title }}">
+									</a>
+								</li>
+							{% endfor %}
 						</ul>
 					</div>
 				</div>
@@ -103,18 +95,18 @@
 					<p>Paradata</p>
 					<p>
 						<a href="https://goo.gl/maps/4d6BKC2FUJE2" target="_blank">
-							200 North Almaden Blvd. Suite 250<br>
-							San Jose, California 95110
+							{{ footer.addressLine1 }}<br>
+							{{ footer.addressLine2 }}
 						</a>
 					</p>
 					<p>
-						<a href="tel:1-408-791-2070">408-791-2070</a><br>
-						<a href="mailto:info@paradata.io">info@paradata.io</a>
+						<a href="tel:1-408-791-2070">{{ footer.phoneNumber }}</a><br>
+						<a href="mailto:info@paradata.io">{{ footer.email }}</a>
 					</p>
 				</div>
 			</div>
 			<div class="darkgray-bg center full">
-				<h6>&copy; 2016 Paradata, all rights reserved.</h6>
+				<h6>&copy; {{ footer.copyrightText }}</h6>
 			</div>
 		</footer>
 	</body>
