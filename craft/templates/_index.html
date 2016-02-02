@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html ng-app="paraData">
+	<head>
+		<title>Paradata | Hackathon</title>
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand:400,300,700">
+		<link type="text/css" rel="stylesheet" href="css/responsive.css">
+		<link type="text/css" rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/paradata.css">
+		<!-- External Script Libraries -->
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.js'></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-route.js'></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-resource.js'></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-animate.js'></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-touch.js'></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+		<!-- Base Scripts -->
+		<script type='text/javascript' src='assets/js/app.js'></script>
+		<script type='text/javascript' src='assets/js/routes.js'></script>
+		<script type='text/javascript' src='assets/js/parallax/parallax.min.js'></script>
+		<script type="text/javascript" src="assets/js/angular-parallax.js"></script>
+		<!-- Core Module Scripts -->
+		<script type='text/javascript' src='assets/js/client.js'></script>
+		<script type='text/javascript' src='assets/js/client-ctrl.js'></script>
+		<script type='text/javascript' src='assets/js/sitemap.js'></script>
+		<script type='text/javascript' src='assets/js/sitemap-ctrl.js'></script>
+		<script type='text/javascript' src='assets/js/contact-drv.js'></script>
+		<script type='text/javascript' src='assets/js/copyright-drv.js'></script>
+		<script type="text/javascript" src="assets/js/hydra-drv.js"></script>
+		<script type="text/javascript" src="assets/js/hydra-ctrl.js"></script>
+		<script type='text/javascript' src='assets/modules/footer/footer-drv.js'></script>
+		<script type='text/javascript' src='assets/modules/header/header-drv.js'></script>
+		<script type='text/javascript' src='assets/modules/nav/nav-drv.js'></script>
+		<script type='text/javascript' src='assets/modules/social/social-drv.js'></script>
+		<!-- Additional Module Scripts -->
+		<script type='text/javascript' src='assets/modules/slides/slides.js'></script>
+		<script type='text/javascript' src='assets/modules/slides/slides-srv.js'></script>
+		<script type='text/javascript' src='assets/modules/slides/slides-ctrl.js'></script>
+		<script type='text/javascript' src='assets/modules/slides/slides-drv.js'></script>
+	</head>
+<!--
+	<body>
+		<appheader class='full'></appheader>
+		<div id="content" class='main full' ng-view></div>
+		<appfooter class='full'></appfooter>
+	</body>
+-->
+<body>
+		<header class="darkgray-bg texture-bg full">
+			<nav class="wrapper middle">
+				<div class="logo">
+					<a href="#"></a>
+				</div>
+				<ul>
+					<li ng-repeat="navitem in sitemap.header.navitems">
+						<a href="{{navitem.link}}">Solutions</a>
+					</li>
+					<li ng-repeat="navitem in sitemap.header.navitems">
+						<a href="{{navitem.link}}">Pricing</a>
+					</li>
+					<li class="nav-cta">
+						<a href="#">Log in</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+	<div class="main full ng-scope" ng-view="" autoscroll="true">
+	<!-- ngInclude:  -->
+	<div class="content full ng-scope">
+		<div class="hero home full ng-isolate-scope" parallax-background="" parallax-ratio="0.2" style="background-position: 50% 16px;"><div ng-transclude="">
+			<div class="hero-overlay full ng-scope">
+				<div class="slideshow full ng-isolate-scope" slideshow="healthscore">
+		<div class="wrapper middle">
+			<!-- ngRepeat: slide in slides --><div class="slide white-txt full ng-scope" ng-repeat="slide in slides" ng-show="slide.visible" ng-animate="animate" ng-swipe-left="next()" ng-swipe-right="prev()">
+				<div class="full pad center">
+					<h1>Transparency meets supply chain</h1>				
+				</div>
+				<a class="half pad" ng-click="next()">
+					<img class="full healthscore middle" title="The Network Score℠" src="assets/icon_networkscore.png">
+				</a>
+				<div class="half pad white-txt">
+					<h2 class="ng-binding">The Network Score℠</h2>
+					<p>
+						<i>
+							<!-- ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">"If your product could say what it needs to be healthy, what would it say?"<br></span><!-- end ngRepeat: question in slide.questions -->
+						</i>
+					</p>
+					<p class="ng-binding">The Paradata Network Score measures a supply chain in four dimensions: Leadtime, Cost, Compliance, and Risk.</p>
+					<a class="button ng-scope" ng-controller="SalesforceController" ng-click="popover()">What's your score?</a>
+				</div>
+			</div>
+
+			<!-- end ngRepeat: slide in slides -->
+			<div class="slide white-txt full ng-scope ng-hide" ng-repeat="slide in slides" ng-show="slide.visible" ng-animate="animate" ng-swipe-left="next()" ng-swipe-right="prev()">
+				<div class="full pad center">
+					<h1>Transparency meets supply chain</h1>				
+				</div>
+				<a class="half pad" ng-click="next()">
+					<img class="full healthscore middle" title="Leadtime" src="assets/icon_leadtime.png">
+				</a>
+				<div class="half pad white-txt">
+					<h2 class="ng-binding">Leadtime</h2>
+					<p>
+						<i>
+							<!-- ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">"Which components will prevent me from shipping product?"<br></span><!-- end ngRepeat: question in slide.questions -->
+						</i>
+					</p>
+					<p class="ng-binding">Leadtime scoring evaluates and simulates the impact of component decisions before committing... that’s transparency.</p>
+					<a class="button ng-scope" ng-controller="SalesforceController" ng-click="popover()">What's your score?</a>
+				</div>
+			</div><!-- end ngRepeat: slide in slides --><div class="slide white-txt full ng-scope ng-hide" ng-repeat="slide in slides" ng-show="slide.visible" ng-animate="animate" ng-swipe-left="next()" ng-swipe-right="prev()">
+				<div class="full pad center">
+					<h1>Transparency meets supply chain</h1>				
+				</div>
+				<a class="half pad" ng-click="next()">
+					<img class="full healthscore middle" title="Cost" src="assets/icon_cost.png">
+				</a>
+				<div class="half pad white-txt">
+					<h2 class="ng-binding">Cost</h2>
+					<p>
+						<i>
+							<!-- ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">"Are my component prices market competitive?"<br></span><!-- end ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">" What should I be paying based on future demand?"<br></span><!-- end ngRepeat: question in slide.questions -->
+						</i>
+					</p>
+					<p class="ng-binding">Cost scoring measures the variance between supplier-provided costs vs the best available market cost... that’s transparency.</p>
+					<a class="button ng-scope" ng-controller="SalesforceController" ng-click="popover()">What's your score?</a>
+				</div>
+			</div><!-- end ngRepeat: slide in slides --><div class="slide white-txt full ng-scope ng-hide" ng-repeat="slide in slides" ng-show="slide.visible" ng-animate="animate" ng-swipe-left="next()" ng-swipe-right="prev()">
+				<div class="full pad center">
+					<h1>Transparency meets supply chain</h1>				
+				</div>
+				<a class="half pad" ng-click="next()">
+					<img class="full healthscore middle" title="Compliance" src="assets/icon_compliance.png">
+				</a>
+				<div class="half pad white-txt">
+					<h2 class="ng-binding">Compliance</h2>
+					<p>
+						<i>
+							<!-- ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">"Are all my products compliant to current regulations?"<br></span><!-- end ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">"Am I prepared for new regulations?"<br></span><!-- end ngRepeat: question in slide.questions -->
+						</i>
+					</p>
+					<p class="ng-binding">Compliance scoring measures the ability of product data to support rigorous examination of import/export compliance... that’s transparency.</p>
+					<a class="button ng-scope" ng-controller="SalesforceController" ng-click="popover()">What's your score?</a>
+				</div>
+			</div><!-- end ngRepeat: slide in slides --><div class="slide white-txt full ng-scope ng-hide" ng-repeat="slide in slides" ng-show="slide.visible" ng-animate="animate" ng-swipe-left="next()" ng-swipe-right="prev()">
+				<div class="full pad center">
+					<h1>Transparency meets supply chain</h1>				
+				</div>
+				<a class="half pad" ng-click="next()">
+					<img class="full healthscore middle" title="Risk" src="assets/icon_risk.png">
+				</a>
+				<div class="half pad white-txt">
+					<h2 class="ng-binding">Risk</h2>
+					<p>
+						<i>
+							<!-- ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">"What is my sole source component status by product?"<br></span><!-- end ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">"Do I have any components going end of life?<br></span><!-- end ngRepeat: question in slide.questions --><span ng-repeat="question in slide.questions" class="ng-binding ng-scope">If yes, which ones?"<br></span><!-- end ngRepeat: question in slide.questions -->
+						</i>
+					</p>
+					<p class="ng-binding">Risk scoring measures how a component is sourced, proximity to manufacturing locations, supplier performance... that’s transparency.</p>
+					<a class="button ng-scope" ng-controller="SalesforceController" ng-click="popover()">What's your score?</a>
+				</div>
+			</div><!-- end ngRepeat: slide in slides -->
+		</div>
+		<button id="prev" class="slidenav" ng-click="prev()"><span class="icon-arrow_left"></span></button>
+		<button id="next" class="slidenav" ng-click="next()"><span class="icon-arrow_right"></span></button>
+	</div>
+
+
+	<div class="white-bg full">
+		<div class="wrapper">
+			<div class="full pad">
+				<h3 class="center">Paradata delivers</h3>
+				<div class="third pad center">
+					<h4 class="bubble secondary-bg white-txt">1</h4>
+					<p>
+						Quickly analyze each bill of materials to improve operating profit, reduce supply risk, and adjust to demand variability.
+						<br>
+						<br>
+						<br class="desktop tablet">
+						<a href="http://paradata.io/#/solutions#1">Learn more</a>
+					</p>
+				</div>
+				<div class="third pad center">
+					<h4 class="bubble secondary-bg white-txt">​2</h4>
+					<p>
+						Assesses existing prices compared to best public prices, delivering lower material costs.
+						<br>
+						<br>
+						<br class="desktop tablet">
+						<br class="desktop tablet">
+						<a href="http://paradata.io/#/solutions#2">Learn more</a>
+					</p>
+				</div>
+				<div class="third pad center">
+					<h4 class="bubble secondary-bg white-txt">3</h4>
+					<p>
+						Provides component and supplier catalogs along with authenticated dataset tools to improve analysis and optimize business processes.
+						<br>
+						<br>
+						<a href="http://paradata.io/#/solutions#3">Learn more</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="lightgray-bg intro full">
+		<div class="wrapper middle">
+			<div class="full">
+				<div class="half pad">
+					<h3>Schedule a demo</h3>
+					<h4>Get a complimentary gourmet coffee gift card</h4>
+					<p>
+						Supply chain discovery and transparency for less than the cost of two lattes per month.<br>
+						The first <img class="inline-icon" src="./images/icons/icon_networkscore.png" alt="Paradata Network Score" title="Paradata Network Score"> is on us!
+					</p>
+					<a href="" class="button-body ng-scope" ng-controller="SalesforceController" ng-click="popover()">Schedule a demo</a>
+				</div>
+				<div class="half pad">
+					<img class="full" src="./images/coffee_cups.png" alt="Free gourmet coffee gift card" title="Free gourmet coffee gift card!">
+				</div>
+			</div>
+		</div>
+	</div>
+		<footer class="full">
+			<div class="wrapper middle">
+				<div class="half pad">
+					<nav>
+						<p>
+							<a href="{{navitem.link}}" ng-repeat="navitem in sitemap.footer.navitems">Company</a><br>
+							<a href="{{navitem.link}}">Careers</a><br>
+						</p>
+					</nav>
+					<div class="social">
+						<p>Follow Us:</p>
+						<ul>
+							<li ng-repeat="social in socials">
+								<a href="{{social.link}}" target="_blank">
+									<img src="assets/images/icons/social_icon_facebook.png" alt="">
+								</a>
+							</li>
+							<li ng-repeat="social in socials">
+								<a href="{{social.link}}" target="_blank">
+									<img src="assets/images/icons/social_icon_twitter.png" alt="">
+								</a>
+							</li>
+							<li ng-repeat="social in socials">
+								<a href="{{social.link}}" target="_blank">
+									<img src="assets/images/icons/social_icon_linkedin.png" alt="">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="contact half pad">
+					<p>Paradata</p>
+					<p>
+						<a href="https://goo.gl/maps/4d6BKC2FUJE2" target="_blank">
+							200 North Almaden Blvd. Suite 250<br>
+							San Jose, California 95110
+						</a>
+					</p>
+					<p>
+						<a href="tel:1-408-791-2070">408-791-2070</a><br>
+						<a href="mailto:info@paradata.io">info@paradata.io</a>
+					</p>
+				</div>
+			</div>
+			<div class="darkgray-bg center full">
+				<h6>&copy; 2016 Paradata, all rights reserved.</h6>
+			</div>
+		</footer>
+	</body>
+</html>

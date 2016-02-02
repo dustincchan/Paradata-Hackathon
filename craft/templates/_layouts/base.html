@@ -1,191 +1,121 @@
 <!DOCTYPE html>
-<!-- saved from url=(0025)http://paradata.io/#/home -->
-<html ng-app="paraData" class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths ng-scope">
-
-	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
-		<!-- Metadata -->
-		<title>Paradata | Transparency meets Supply Chain</title>
-		<meta name="description" content="Big data meets manufacturing">
-		<meta name="keywords" content="Big Data,Manufacturing,Golden Data,Technology,SaaS,BOM,Supply Chain">
-		<meta name="author" content="Richard Smith">
-		
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-		<link rel="icon" href="http://paradata.io/assets/images/icons/paradata-favicon.png">
+<html ng-app="paraData">
+	<head>
+		<title>Paradata | Hackathon</title>
 		<!-- Styles -->
-		<link type="text/css" rel="stylesheet" href="./css/css">
-		<link type="text/css" rel="stylesheet" href="./css/pricing.css">
-		<link type="text/css" rel="stylesheet" href="./css/responsive.css">
-		<link type="text/css" rel="stylesheet" href="./css/styles.css">
-		<link type="text/css" rel="stylesheet" href="./css/icons.css">
-		<link type="text/css" rel="stylesheet" href="./css/paradata.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand:400,300,700">
+		<link type="text/css" rel="stylesheet" href="css/responsive.css">
+		<link type="text/css" rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/paradata.css">
 		<!-- External Script Libraries -->
-		<script async="" src="./assets/js/analytics.js"></script><script type="text/javascript" src="./assets/js/angular.js"></script>
-		<script type="text/javascript" src="./assets/js/angular-route.js"></script>
-		<script type="text/javascript" src="./assets/js/angular-resource.js"></script>
-		<script type="text/javascript" src="./assets/js/angular-animate.js"></script>
-		<script type="text/javascript" src="./assets/js/angular-touch.js"></script>
-		<script type="text/javascript" src="./assets/js/jquery.min.js"></script>
-		<!-- Pricing Mod -->
-		<script type="text/javascript" src="./assets/js/modernizr.js"></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.js'></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-route.js'></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-resource.js'></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-animate.js'></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular-touch.js'></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
 		<!-- Base Scripts -->
-		<script type="text/javascript" src="./assets/js/app.js"></script>
-		<script type="text/javascript" src="./assets/js/routes.js"></script>
-		<script type="text/javascript" src="./assets/js/chimera-ctrl.js"></script>
-		<script type="text/javascript" src="./assets/js/hydra-drv.js"></script>
-		<script type="text/javascript" src="./assets/js/hydra-ctrl.js"></script>
-		<script type="text/javascript" src="./assets/js/google_analytics.js"></script>
-		<script type="text/javascript" src="./assets/js/angular-parallax.js"></script>
+		<script type='text/javascript' src='assets/js/app.js'></script>
+		<script type='text/javascript' src='assets/js/routes.js'></script>
+		<script type='text/javascript' src='assets/js/parallax/parallax.min.js'></script>
+		<script type="text/javascript" src="assets/js/angular-parallax.js"></script>
 		<!-- Core Module Scripts -->
-		<!--<script type="text/javascript" src="./assets/js/client-ctrl.js"></script>
-		<script type="text/javascript" src="./assets/js/sitemap-ctrl.js"></script>
-		<script type="text/javascript" src="./assets/js/config-ctrl.js"></script>
-		<script type="text/javascript" src="./assets/js/config-drv.js"></script>
-		<script type="text/javascript" src="./assets/js/contact-drv.js"></script>
-		<script type="text/javascript" src="./assets/js/copyright-drv.js"></script>
-		<script type="text/javascript" src="./assets/js/copyright-ctrl.js"></script>
-		<script type="text/javascript" src="./assets/modules/footer/footer-drv.js"></script>
-		<script type="text/javascript" src="./assets/modules/header/header-drv.js"></script>
-		<script type="text/javascript" src="./assets/js/nav-drv.js"></script>
-		<script type="text/javascript" src="./assets/js/social-drv.js"></script> -->
+		<script type='text/javascript' src='assets/js/client.js'></script>
+		<script type='text/javascript' src='assets/js/client-ctrl.js'></script>
+		<script type='text/javascript' src='assets/js/sitemap.js'></script>
+		<script type='text/javascript' src='assets/js/sitemap-ctrl.js'></script>
+		<script type='text/javascript' src='assets/js/contact-drv.js'></script>
+		<script type='text/javascript' src='assets/js/copyright-drv.js'></script>
+		<script type="text/javascript" src="assets/js/hydra-drv.js"></script>
+		<script type="text/javascript" src="assets/js/hydra-ctrl.js"></script>
+		<script type='text/javascript' src='assets/modules/footer/footer-drv.js'></script>
+		<script type='text/javascript' src='assets/modules/header/header-drv.js'></script>
+		<script type='text/javascript' src='assets/modules/nav/nav-drv.js'></script>
+		<script type='text/javascript' src='assets/modules/social/social-drv.js'></script>
 		<!-- Additional Module Scripts -->
-		
-		<script type="text/javascript" src="./assets/js/slides-drv.js"></script>
-		<script type="text/javascript" src="./assets/js/slides-ctrl.js"></script>
-		<script type="text/javascript" src="./assets/js/slide-change.js"></script>
-		<script type="text/javascript" src="./assets/js/team-ctrl.js"></script>
-		<script type="text/javascript" src="./assets/js/team-drv.js"></script>
-		<!--<script type="text/javascript" src="./assets/js/salesforce-drv.js"></script>
-		<script type="text/javascript" src="./assets/js/salesforce-ctrl.js"></script> -->
-		<script type="text/javascript" src="./assets/js/pricing-drv.js"></script>
-		<script type="text/javascript" src="./assets/js/pricing-ctrl.js"></script> 
+		<script type='text/javascript' src='assets/modules/slides/slides.js'></script>
+		<script type='text/javascript' src='assets/modules/slides/slides-srv.js'></script>
+		<script type='text/javascript' src='assets/modules/slides/slides-ctrl.js'></script>
+		<script type='text/javascript' src='assets/modules/slides/slides-drv.js'></script>
 	</head>
-	<body class="darkgray-bg texture-bg">
-		<appheader class="full"><header class="darkgray-bg texture-bg full">
-	<div class="wrapper middle">
-		<navigation class="full"><nav class="full">
-	<div class="logo desktop">
-		<a href="http://paradata.io/#"></a>
-	</div>
-	<div class="logo tablet mobile">
-		<a href="http://paradata.io/#"></a>
-	</div>
-
-</nav></navigation>
-	</div>
-</header></appheader>
-
-		</div>
-	</div></div>
-	<div class="white-bg full">
-		<div class="wrapper">
-			<div class="full pad">
-				<h3 class="center">Paradata delivers</h3>
-				<div class="third pad center">
-					<h4 class="bubble secondary-bg white-txt">1</h4>
-					<p>
-						Quickly analyze each bill of materials to improve operating profit, reduce supply risk, and adjust to demand variability.
-						<br>
-						<br>
-						<br class="desktop tablet">
-						<a href="http://paradata.io/#/solutions#1">Learn more</a>
-					</p>
+<!--
+	<body>
+		<appheader class='full'></appheader>
+		<div id="content" class='main full' ng-view></div>
+		<appfooter class='full'></appfooter>
+	</body>
+-->
+<body>
+		<header class="darkgray-bg texture-bg full">
+			<nav class="wrapper middle">
+				<div class="logo">
+					<a href="#"></a>
 				</div>
-				<div class="third pad center">
-					<h4 class="bubble secondary-bg white-txt">​2</h4>
-					<p>
-						Assesses existing prices compared to best public prices, delivering lower material costs.
-						<br>
-						<br>
-						<br class="desktop tablet">
-						<br class="desktop tablet">
-						<a href="http://paradata.io/#/solutions#2">Learn more</a>
-					</p>
-				</div>
-				<div class="third pad center">
-					<h4 class="bubble secondary-bg white-txt">3</h4>
-					<p>
-						Provides component and supplier catalogs along with authenticated dataset tools to improve analysis and optimize business processes.
-						<br>
-						<br>
-						<a href="http://paradata.io/#/solutions#3">Learn more</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="lightgray-bg intro full">
-		<div class="wrapper middle">
-			<div class="full">
-				<div class="half pad">
-					<h3>Schedule a demo</h3>
-					<h4>Get a complimentary gourmet coffee gift card</h4>
-					<p>
-						Supply chain discovery and transparency for less than the cost of two lattes per month.<br>
-						The first <img class="inline-icon" src="./images/icons/icon_networkscore.png" alt="Paradata Network Score" title="Paradata Network Score"> is on us!
-					</p>
-				</div>
-				<div class="half pad">
-					<img class="full" src="./images/coffee_cups.png" alt="Free gourmet coffee gift card" title="Free gourmet coffee gift card!">
-				</div>
-			</div>
-		</div>
-	</div>
-</div></div></div>
-		<appfooter class="full"><footer class="full">
-	<div class="wrapper middle">
-		<div class="half pad">
-			<nav ng-controller="SitemapController" class="ng-scope">
-				<p>
-					<!-- ngRepeat: navitem in sitemap.footer.navitems --><span ng-repeat="navitem in sitemap.footer.navitems" class="ng-scope">
-						<a href="http://paradata.io/#/company" class="ng-binding">Company</a>
-						<br>
-					</span><!-- end ngRepeat: navitem in sitemap.footer.navitems --><span ng-repeat="navitem in sitemap.footer.navitems" class="ng-scope">
-						<a href="http://paradata.io/#/careers" class="ng-binding">Careers</a>
-						<br>
-					</span><!-- end ngRepeat: navitem in sitemap.footer.navitems -->
-				</p>
+				<ul>
+					<li ng-repeat="navitem in sitemap.header.navitems">
+						<a href="{{navitem.link}}">Solutions</a>
+					</li>
+					<li ng-repeat="navitem in sitemap.header.navitems">
+						<a href="{{navitem.link}}">Pricing</a>
+					</li>
+					<li class="nav-cta">
+						<a href="#">Log in</a>
+					</li>
+				</ul>
 			</nav>
-			<social class="full"><div class="social full">
-	<p>Follow us:</p>
-	<ul>
-		<!-- ngRepeat: social in client.socials --><li ng-repeat="social in client.socials" class="ng-scope">
-			<a id="facebook" href="https://www.facebook.com/paradata.io/?fref=ts" target="_blank">
-				<img src="./images/icons/social_icon_facebook.png" alt="facebook icon">
-			</a>
-		</li><!-- end ngRepeat: social in client.socials --><li ng-repeat="social in client.socials" class="ng-scope">
-			<a id="twitter" href="https://twitter.com/Paradata_io?lang=en" target="_blank">
-				<img src="./images/icons/social_icon_twitter.png" alt="twitter icon">
-			</a>
-		</li><!-- end ngRepeat: social in client.socials --><li ng-repeat="social in client.socials" class="ng-scope">
-			<a id="linkedin" href="https://www.linkedin.com/company/1039017?trk=tyah&amp;trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A1039017%2Cidx%3A2-1-2%2CtarId%3A1453508639963%2Ctas%3Aparada" target="_blank">
-				<img src="./images/icons/social_icon_linkedin.png" alt="linkedin icon">
-			</a>
-		</li><!-- end ngRepeat: social in client.socials -->
-	</ul>
-</div></social>
-		</div>
-		<contact class="half pad"><div class="full">
-	<p class="ng-binding">Paradata </p>
-	<!-- ngRepeat: location in client.locations --><p ng-repeat="location in client.locations" class="ng-scope">
-		<a href="https://goo.gl/maps/4d6BKC2FUJE2" target="_blank" class="ng-binding">
-			200 North Almaden Blvd #250<br>
-			San Jose, CA 95110
-		</a>
-	</p><!-- end ngRepeat: location in client.locations -->
-	<p>
-		<a href="tel:1-408-791-2070" class="ng-binding">408-791-2070</a><br>
-		<a href="mailto:info@paradata.io" class="ng-binding">info@paradata.io</a>
-	</p>
-</div></contact>
-	</div>
-	<copyright class="full"><div class="darkgray-bg center full ng-scope" ng-controller="CopyrightController as copyright">
-	<h6 class="ng-binding">
-		© 2016   • All rights reserved • <a href="http://paradata.io/#/privacy">Privacy policy</a>
-	</h6>
-</div></copyright>
-</footer></appfooter>
-		<script type="text/javascript" src="./assets/js/jquery-2.1.1.js"></script>
-		<script type="text/javascript" src="./assets/js/pricing.js"></script>
-	
-</body></html>
+		</header>
+
+
+  {% block content %}Content goes here{% endblock %}
+
+
+		<footer class="full">
+			<div class="wrapper middle">
+				<div class="half pad">
+					<nav>
+						<p>
+							<a href="{{navitem.link}}" ng-repeat="navitem in sitemap.footer.navitems">Company</a><br>
+							<a href="{{navitem.link}}">Careers</a><br>
+						</p>
+					</nav>
+					<div class="social">
+						<p>Follow Us:</p>
+						<ul>
+							<li ng-repeat="social in socials">
+								<a href="{{social.link}}" target="_blank">
+									<img src="assets/images/icons/social_icon_facebook.png" alt="">
+								</a>
+							</li>
+							<li ng-repeat="social in socials">
+								<a href="{{social.link}}" target="_blank">
+									<img src="assets/images/icons/social_icon_twitter.png" alt="">
+								</a>
+							</li>
+							<li ng-repeat="social in socials">
+								<a href="{{social.link}}" target="_blank">
+									<img src="assets/images/icons/social_icon_linkedin.png" alt="">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="contact half pad">
+					<p>Paradata</p>
+					<p>
+						<a href="https://goo.gl/maps/4d6BKC2FUJE2" target="_blank">
+							200 North Almaden Blvd. Suite 250<br>
+							San Jose, California 95110
+						</a>
+					</p>
+					<p>
+						<a href="tel:1-408-791-2070">408-791-2070</a><br>
+						<a href="mailto:info@paradata.io">info@paradata.io</a>
+					</p>
+				</div>
+			</div>
+			<div class="darkgray-bg center full">
+				<h6>&copy; 2016 Paradata, all rights reserved.</h6>
+			</div>
+		</footer>
+	</body>
+</html>
