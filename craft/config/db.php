@@ -11,10 +11,19 @@ $url=parse_url(getenv(“CLEARDB_DATABASE_URL”));
 
 return array(
 
-	‘server’ => $url[“host”],
-	‘user’ => $url[“user”],
-	‘password’ => $url[“pass”],
-	‘database’ => substr($url[“path”],1),
-	‘tablePrefix’ => ‘craft’,
+	// The database server name or IP address. Usually this is 'localhost' or '127.0.0.1'.
+	'server' => $url["host"],
+
+	// The name of the database to select.
+	'user' => $url["user"],
+
+	// The database username to connect with.
+	'password' => $url["pass"],
+
+	// The database password to connect with.
+	'database' => substr($url[“path”],1),
+
+	// The prefix to use when naming tables. This can be no more than 5 characters.
+	'tablePrefix' => 'craft',
 
 );
