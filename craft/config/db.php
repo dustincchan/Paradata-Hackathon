@@ -10,18 +10,14 @@
 $url=parse_url(getenv(“CLEARDB_DATABASE_URL”));
 
 
-$server => $url["host"];
+'server' => $url["host"],
 
-$user => $url["user"];
+'user' => $url["user"],
 
-$password => $url["pass"];
+'password' => $url["pass"],
 
-$database => substr($url[“path”],1);
+'database' => substr($url[“path”],1),
 
-$tablePrefix => 'craft';
-
-mysql_connect($server, $username, $password);
-
-mysql_select_db($db);
+'tablePrefix' => 'craft',
 
 ?>
