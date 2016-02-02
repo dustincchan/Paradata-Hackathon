@@ -11,27 +11,27 @@
 				<!-- ngRepeat: slide in slides -->
 					<div class="slide white-txt full ng-scope" ng-repeat="slide in slides" ng-show="slide.visible" ng-animate="animate" ng-swipe-left="next()" ng-swipe-right="prev()">
 						<div class="full pad center">
-							<h1>Transparency meets supply chain</h1>
+							<h1>{{ entry.homepageHeader }}</h1>
 						</div>
 						<a class="half pad" ng-click="next()">
 							<img class="full healthscore middle" title="The Network Score℠" src="assets/icon_networkscore.png">
 						</a>
 						<div class="half pad white-txt">
-							<h2 class="ng-binding">The Network Score℠</h2>
+							<h2 class="ng-binding">{{ entry.slideHeader }}</h2>
 							<p>
 								<i>
 									<!-- ngRepeat: question in slide.questions -->
-									<span ng-repeat="question in slide.questions" class="ng-binding ng-scope">"If your product could say what it needs to be healthy, what would it say?"<br></span><!-- end ngRepeat: question in slide.questions -->
+									<span ng-repeat="question in slide.questions" class="ng-binding ng-scope">{{ entry.slideQuestion }}<br></span><!-- end ngRepeat: question in slide.questions -->
 								</i>
 							</p>
-							<p class="ng-binding">The Paradata Network Score measures a supply chain in four dimensions: Leadtime, Cost, Compliance, and Risk.</p>
-							<a class="button ng-scope" ng-controller="SalesforceController" ng-click="popover()">What's your score?</a>
+							<p class="ng-binding">{{ entry.slideDescription }}</p>
+							<a class="button ng-scope" ng-controller="SalesforceController" ng-click="popover()">{{ entry.scoreLabelText }}</a>
 						</div>
 					</div>
 		<!-- end ngRepeat: slide in slides -->
 		<div class="slide white-txt full ng-scope ng-hide" ng-repeat="slide in slides" ng-show="slide.visible" ng-animate="animate" ng-swipe-left="next()" ng-swipe-right="prev()">
 			<div class="full pad center">
-				<h1>Transparency meets supply chain</h1>
+				<h1>{{ entry.homepageHeader }}</h1>
 			</div>
 			<a class="half pad" ng-click="next()">
 				<img class="full healthscore middle" title="Leadtime" src="assets/icon_leadtime.png">
@@ -51,7 +51,7 @@
 		<!-- end ngRepeat: slide in slides -->
 		<div class="slide white-txt full ng-scope ng-hide" ng-repeat="slide in slides" ng-show="slide.visible" ng-animate="animate" ng-swipe-left="next()" ng-swipe-right="prev()">
 			<div class="full pad center">
-				<h1>Transparency meets supply chain</h1>
+				<h1>{{ entry.homepageHeader }}</h1>
 			</div>
 			<a class="half pad" ng-click="next()">
 				<img class="full healthscore middle" title="Cost" src="assets/icon_cost.png">
@@ -111,36 +111,19 @@
 	<div class="wrapper">
 		<div class="full pad">
 			<h3 class="center">Paradata delivers</h3>
+
+			{% for block in entry.threeStepProcess.type('processes') %}
 			<div class="third pad center">
-				<h4 class="bubble secondary-bg white-txt">1</h4>
-				<p>
-					Quickly analyze each bill of materials to improve operating profit, reduce supply risk, and adjust to demand variability.
+				<h4 class="bubble secondary-bg white-txt">{{ block.numberBubble }}</h4>
+				<p>{{ block.processDescription }}
 					<br>
 					<br>
 					<br class="desktop tablet">
-					<a href="http://paradata.io/#/solutions#1">Learn more</a>
+					<a href="http://paradata.io/#/solutions#1">{{ block.linkText }}</a>
 				</p>
 			</div>
-			<div class="third pad center">
-				<h4 class="bubble secondary-bg white-txt">​2</h4>
-				<p>
-					Assesses existing prices compared to best public prices, delivering lower material costs.
-					<br>
-					<br>
-					<br class="desktop tablet">
-					<br class="desktop tablet">
-					<a href="http://paradata.io/#/solutions#2">Learn more</a>
-				</p>
-			</div>
-			<div class="third pad center">
-				<h4 class="bubble secondary-bg white-txt">3</h4>
-				<p>
-					Provides component and supplier catalogs along with authenticated dataset tools to improve analysis and optimize business processes.
-					<br>
-					<br>
-					<a href="http://paradata.io/#/solutions#3">Learn more</a>
-				</p>
-			</div>
+			{% endfor %}
+			
 		</div>
 	</div>
 </div>
