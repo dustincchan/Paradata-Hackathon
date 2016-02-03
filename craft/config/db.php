@@ -16,7 +16,7 @@ $url=parse_url(getenv(“CLEARDB_DATABASE_URL”));
 
 'password' => $url["pass"],
 
-'database' => substr($url[“path”],1),
+'database' => 'paradata',
 
 'tablePrefix' => 'craft',
 
