@@ -57,6 +57,3 @@ date_default_timezone_set('UTC');
 
 // Load and run Craft
 // -----------------------------------------------------------------------------
-
-$app = require 'bootstrap.php';
-$app->run();
